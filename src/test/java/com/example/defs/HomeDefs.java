@@ -9,7 +9,7 @@ public class HomeDefs {
     @Steps
     HomePage homePage;
 
-    @And("User clicks to Profile tab")
+    @And("User taps to Profile tab")
     public void userClicksToProfileTab() {
         homePage.userClickToProfileTab();
     }

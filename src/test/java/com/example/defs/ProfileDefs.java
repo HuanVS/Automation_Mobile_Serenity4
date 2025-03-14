@@ -17,7 +17,7 @@ public class ProfileDefs {
     @Steps
     ProfileSteps profileSteps;
 
-    @And("User clicks to item Tutorials")
+    @And("User taps to item Tutorials")
     public void userClicksToItemTutorials() {
         profileSteps.userClickToTutorial();
     }

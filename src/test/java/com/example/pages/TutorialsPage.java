@@ -13,6 +13,15 @@ public class TutorialsPage extends BasePage {
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Assigned Route']")
     private WebElementFacade lblAssignedRoute;
 
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Quit tutorial']")
+    private WebElementFacade btnQuitTutorial;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Yes, quit tutorial']")
+    private WebElementFacade btnConfirmQuitTutorial;
+
+    @AndroidFindBy(xpath = "//android.widget.Button[@content-desc='Start Tutorial']")
+    private WebElementFacade btnStartTutorial;
+
     public boolean verifyTutorialsScreen(String section) {
         String locatorSection = "//*[@content-desc='%s']";
         waitABit(1000);
@@ -24,9 +33,26 @@ public class TutorialsPage extends BasePage {
         try {
             lblAssignedRoute.waitUntilClickable();
             lblAssignedRoute.click();
-            waitABit(60000);
         } catch (Exception ex) {
             logger.error("Error clicking on element: {}", lblAssignedRoute, ex);
+        }
+    }
+
+    public void userTapsOnStartTutorial(){
+        try {
+            btnStartTutorial.waitUntilClickable();
+            btnStartTutorial.click();
+        } catch (Exception ex) {
+            logger.error("Error clicking on element: {}", btnStartTutorial, ex);
+        }
+    }
+
+    public void userTapsOnBtnQuitTutorial(){
+        try {
+            btnQuitTutorial.waitUntilClickable().click();
+            btnConfirmQuitTutorial.waitUntilClickable().click();
+        } catch (Exception ex) {
+            logger.error("Error clicking on element: {}", btnQuitTutorial, ex);
         }
     }
 }

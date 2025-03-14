@@ -9,6 +9,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/",
         plugin = {
                 "pretty",
+                "html:target/site/serenity/",
                 "json:target/serenity-reports/cucumber_report.json"
         },
         glue = {"com.example.defs"},

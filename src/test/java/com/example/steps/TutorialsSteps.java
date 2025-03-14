@@ -17,4 +17,14 @@ public class TutorialsSteps {
     public void userTapsOnAssignedRoute(){
         tutorialsPage.userTapsOnAssignedRoute();
     }
+
+    @Step
+    public void userTapsOnBtnQuitTutorial(){
+        tutorialsPage.userTapsOnBtnQuitTutorial();
+    }
+
+    @Step
+    public void userTapsOnStartTutorial(){
+        tutorialsPage.userTapsOnStartTutorial();
+    }
 }
