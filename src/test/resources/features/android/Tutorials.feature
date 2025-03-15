@@ -19,11 +19,10 @@ Feature: Driver completes the Assigned Route tutorial
       | Ticket Booking  |
     # 4. He taps on Assigned Route
     When User taps on item Assigned Route
-    # 5,6. Since the starting of the tutorial is not visible, I will click "Quit tutorial" to end the test case here.
+    # 5,6. User start tutorial and then quit tutorial
     Then User should see Active Assignment screen
     When User taps on Start Tutorial in Active Assignment screen
     And  User taps on Quit tutorial in Active Assignment screen
-
 
     Examples:
       | username    | password  |

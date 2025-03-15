@@ -4,7 +4,7 @@ import com.example.common.BasePage;
 import dev.failsafe.internal.util.Assert;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
-import org.apache.http.util.Asserts;
+import org.assertj.core.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,8 +19,9 @@ public class HomePage extends BasePage {
 
     public void userShouldSeeHomePageAfterLoginSuccessfully(){
         waitUntilElementVisible(txtActiveAssignment);
-        Assert.isTrue(txtActiveAssignment.isPresent(),
-                "txtActiveAssignment isn't present!");
+        Assertions.assertThat(txtActiveAssignment.isPresent()).isEqualTo(true);
+//        Assert.isTrue(txtActiveAssignment.isPresent(),
+//                "txtActiveAssignment isn't present!");
 
     }
 

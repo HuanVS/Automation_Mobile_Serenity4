@@ -2,14 +2,8 @@ package com.example.pages;
 
 
 import com.example.common.BasePage;
-import com.example.common.DataUtils;
-import io.appium.java_client.android.nativekey.AndroidKey;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
-import org.openqa.selenium.WebElement;
 
 public class LoginPage extends BasePage {
 
