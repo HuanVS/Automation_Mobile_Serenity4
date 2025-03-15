@@ -11,8 +11,7 @@ _Feature: src/test/resources/features/android/Tutorials.feature\
 ## Execute test script
 _Method 1: Using maven command line
 ```
-mvn clean verify -Dtags="@Android_TC001"
-mvn clean verify -Denvironment=default -Dtags="@Android_TC001"
+mvn clean verify -D"cucumber.filter.tags=@Android_TC001"
 ```
 _Method 2: Using CucumberTestSuite
 
